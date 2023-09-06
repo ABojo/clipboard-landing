@@ -1,0 +1,38 @@
+@use "../mixins/layout-center" as *;
+
+.header {
+  background-image: url("../images/bg-header-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__inner {
+    @include layout-center;
+    text-align: center;
+    padding-top: 8rem;
+  }
+
+  &__logo {
+    margin-bottom: 3.5rem;
+    display: inline-block;
+  }
+
+  &__heading {
+    margin-bottom: 1rem;
+  }
+
+  &__paragraph {
+    font-size: var(--fs-2);
+    max-width: 46rem;
+    margin: 0 auto;
+    color: var(--color-gray-blue-1);
+    line-height: var(--lh-para);
+    margin-bottom: 3rem;
+  }
+
+  &__links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
