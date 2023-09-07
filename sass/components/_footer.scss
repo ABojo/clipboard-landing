@@ -1,0 +1,55 @@
+@use "../mixins/layout-center" as *;
+
+.footer {
+  margin-top: 9rem;
+  background-color: rgba(#9eabb2, 0.12);
+  padding-block: 2.6rem;
+
+  &__inner {
+    @include layout-center;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: "logo nav socials";
+    align-items: center;
+  }
+
+  &__logo {
+    grid-area: logo;
+    width: 3.5rem;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1rem;
+    max-width: 37rem;
+  }
+
+  &__link {
+    color: var(--color-gray-blue-2);
+    font-size: var(--fs-2);
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+      color: var(--color-cyan);
+    }
+  }
+
+  &__socials {
+    justify-self: end;
+    list-style-type: none;
+    display: flex;
+    gap: 1.75rem;
+
+    li a {
+      color: var(--color-gray-blue-2);
+      transition: all 0.2s;
+
+      &:hover {
+        color: var(--color-cyan);
+      }
+    }
+  }
+}
