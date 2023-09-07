@@ -7,6 +7,11 @@
   border-radius: 1.75rem;
   transition: all 0.2s;
 }
+@media (max-width: 33.75rem) {
+  .cta {
+    width: 100%;
+  }
+}
 .cta--ios {
   background-color: var(--color-cyan);
   box-shadow: 0px 10px 20px rgba(137, 229, 199, 0.503305), inset 0px -3px 0px rgba(0, 0, 0, 0.151333);
@@ -23,6 +28,11 @@
   background-image: url("../images/bg-header-desktop.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media (max-width: 33.75rem) {
+  .header {
+    background-image: url("../images/bg-header-mobile.png");
+  }
 }
 .header__inner {
   max-width: var(--layout-max-width);
@@ -52,10 +62,20 @@
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 33.75rem) {
+  .header__links {
+    flex-direction: column;
+  }
+}
 
 .track {
   text-align: center;
   margin-top: 9.25rem;
+}
+.track__intro {
+  max-width: var(--layout-max-width);
+  width: var(--layout-width);
+  margin: 0 auto;
 }
 .track__heading {
   margin-bottom: 1rem;
@@ -69,10 +89,30 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+@media (max-width: 62.5rem) {
+  .track__grid {
+    align-items: center;
+  }
+}
+@media (max-width: 53.125rem) {
+  .track__grid {
+    grid-template-columns: 1fr;
+    max-width: var(--layout-max-width);
+    width: var(--layout-width);
+    margin: 0 auto;
+  }
+}
 .track__graphic {
   width: 104%;
   position: relative;
   left: -2rem;
+}
+@media (max-width: 53.125rem) {
+  .track__graphic {
+    position: static;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 .track__list {
   text-align: left;
@@ -85,12 +125,29 @@
   width: var(--layout-width);
   margin: 0 auto;
 }
+@media (max-width: 53.125rem) {
+  .track__list {
+    text-align: center;
+  }
+}
 .track__item h3 {
   margin-bottom: 0.5rem;
 }
+.track__item p {
+  max-width: 28rem;
+}
+@media (max-width: 53.125rem) {
+  .track__item p {
+    margin: 0 auto;
+  }
+}
+
 .access {
   text-align: center;
   padding-top: 9.5rem;
+  max-width: var(--layout-max-width);
+  width: var(--layout-width);
+  margin: 0 auto;
 }
 .access__heading {
   margin-bottom: 1rem;
@@ -101,7 +158,12 @@
   margin-bottom: 6rem;
 }
 .access__graphic {
-  width: 63%;
+  width: 80%;
+}
+@media (max-width: 33.75rem) {
+  .access__graphic {
+    width: 100%;
+  }
 }
 
 .supercharge {
@@ -123,8 +185,20 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2rem;
 }
+@media (max-width: 53.125rem) {
+  .supercharge__list {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
 .supercharge__list li h3 {
   margin-bottom: 1rem;
+}
+@media (max-width: 53.125rem) {
+  .supercharge__list li p {
+    max-width: 20rem;
+    margin: 0 auto;
+  }
 }
 .supercharge__icon {
   margin-bottom: 2.5rem;
@@ -138,6 +212,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 62.5rem) {
+  .partners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+  }
+}
+@media (max-width: 33.75rem) {
+  .partners {
+    flex-direction: column;
+  }
 }
 
 .clipboard {
@@ -161,6 +248,11 @@
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 33.75rem) {
+  .clipboard__links {
+    flex-direction: column;
+  }
+}
 
 .footer {
   margin-top: 9rem;
@@ -176,6 +268,14 @@
   grid-template-areas: "logo nav socials";
   align-items: center;
 }
+@media (max-width: 53.125rem) {
+  .footer__inner {
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo" "nav" "socials";
+    justify-items: center;
+    gap: 3rem;
+  }
+}
 .footer__logo {
   grid-area: logo;
   width: 3.5rem;
@@ -186,6 +286,19 @@
   grid-template-columns: repeat(3, 1fr);
   row-gap: 1rem;
   max-width: 37rem;
+}
+@media (max-width: 53.125rem) {
+  .footer__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 40rem) {
+  .footer__list {
+    flex-direction: column;
+  }
 }
 .footer__link {
   color: var(--color-gray-blue-2);
@@ -201,6 +314,11 @@
   list-style-type: none;
   display: flex;
   gap: 1.75rem;
+}
+@media (max-width: 53.125rem) {
+  .footer__socials {
+    justify-self: center;
+  }
 }
 .footer__socials li a {
   color: var(--color-gray-blue-2);
@@ -255,6 +373,14 @@
   --lh-para: 1.875rem;
   --layout-max-width: 70rem;
   --layout-width: 90%;
+}
+@media (max-width: 33.75rem) {
+  :root {
+    --fs-5: 2rem;
+    --fs-4: 1.75rem;
+    --fs-3: 1.2rem;
+    --fs-2: 1.1rem;
+  }
 }
 
 *,

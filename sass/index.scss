@@ -1,3 +1,14 @@
+@use "./components/cta";
+@use "./components/header";
+@use "./components/track";
+@use "./components/access";
+@use "./components/supercharge";
+@use "./components/partners";
+@use "./components/clipboard";
+@use "./components/footer";
+@use "./utils/typography";
+@use "./utils/breakpoints" as *;
+
 :root {
   --color-cyan: hsl(171, 66%, 44%);
   --color-light-blue: hsl(233, 100%, 69%);
@@ -14,6 +25,16 @@
   --fw-2: 600;
 
   --lh-para: 1.875rem;
+
+  --layout-max-width: 70rem;
+  --layout-width: 90%;
+
+  @media (max-width: $bp-4) {
+    --fs-5: 2rem;
+    --fs-4: 1.75rem;
+    --fs-3: 1.2rem;
+    --fs-2: 1.1rem;
+  }
 }
 
 *,
