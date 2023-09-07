@@ -1,4 +1,5 @@
 @use "../mixins/layout-center" as *;
+@use "../utils/breakpoints" as *;
 
 .footer {
   margin-top: 9rem;
@@ -11,6 +12,16 @@
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-areas: "logo nav socials";
     align-items: center;
+
+    @media (max-width: $bp-2) {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "logo"
+        "nav"
+        "socials";
+      justify-items: center;
+      gap: 3rem;
+    }
   }
 
   &__logo {
@@ -24,6 +35,17 @@
     grid-template-columns: repeat(3, 1fr);
     row-gap: 1rem;
     max-width: 37rem;
+
+    @media (max-width: $bp-2) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: $bp-3) {
+      flex-direction: column;
+    }
   }
 
   &__link {
@@ -42,6 +64,10 @@
     list-style-type: none;
     display: flex;
     gap: 1.75rem;
+
+    @media (max-width: $bp-2) {
+      justify-self: center;
+    }
 
     li a {
       color: var(--color-gray-blue-2);

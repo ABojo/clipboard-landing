@@ -1,6 +1,11 @@
+@use "../mixins/layout-center" as *;
+@use "../utils/breakpoints" as *;
+
 .access {
   text-align: center;
   padding-top: 9.5rem;
+
+  @include layout-center;
 
   &__heading {
     margin-bottom: 1rem;
@@ -13,6 +18,10 @@
   }
 
   &__graphic {
-    width: 63%;
+    width: 80%;
+
+    @media (max-width: $bp-4) {
+      width: 100%;
+    }
   }
 }

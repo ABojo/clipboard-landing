@@ -1,4 +1,5 @@
 @use "../mixins/layout-center" as *;
+@use "../utils/breakpoints" as *;
 
 .partners {
   @include layout-center;
@@ -6,4 +7,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: $bp-1) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  @media (max-width: $bp-4) {
+    flex-direction: column;
+  }
 }

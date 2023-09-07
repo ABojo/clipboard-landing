@@ -1,9 +1,14 @@
 @use "../mixins/layout-center" as *;
+@use "../utils/breakpoints" as *;
 
 .header {
   background-image: url("../images/bg-header-desktop.png");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (max-width: $bp-4) {
+    background-image: url("../images/bg-header-mobile.png");
+  }
 
   &__inner {
     @include layout-center;
@@ -34,5 +39,9 @@
     gap: 1rem;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: $bp-4) {
+      flex-direction: column;
+    }
   }
 }
